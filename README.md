@@ -106,17 +106,17 @@ This phase was not intended to demonstrate compromise. Its purpose was to genera
 
 ## Screenshots
 
-![RDP enabled on DC](Screenshots/01-rdp-enabled-on-dc.png)
-![Weak user created](Screenshots/02-sally-domain-user-created.png)
-![Sally added to Remote Desktop Users](Screenshots/03a-sally-added-to-remote-desktop-users.png)
-![Allow log on through RDP policy](Screenshots/03b-allow-logon-through-rdp-policy.png)
-![Allow log on locally policy](Screenshots/03c-allow-logon-locally-policy.png)
-![Default Domain Policy enforced](Screenshots/03d-default-domain-policy-enforced.png)
-![Group policy update](Screenshots/04-gpupdate-force-success.png)
-![Nmap confirms RDP exposure](Screenshots/05-nmap-rdp-port-open-on-dc.png)
-![Rockyou wordlist prepared](Screenshots/06-rockyou-wordlist-ready.png)
-![Hydra discovers Sally credentials](Screenshots/07-hydra-sally-success.png)
-![Hydra brute-force attempt against Administrator](Screenshots/08-hydra-administrator-attempt.png)
+![RDP enabled on DC](screenshots/01-rdp-enabled-on-dc.png)
+![Weak user created](screenshots/02-sally-domain-user-created.png)
+![Sally added to Remote Desktop Users](screenshots/03a-sally-added-to-remote-desktop-users.png)
+![Allow log on through RDP policy](screenshots/03b-allow-logon-through-rdp-policy.png)
+![Allow log on locally policy](screenshots/03c-allow-logon-locally-policy.png)
+![Default Domain Policy enforced](screenshots/03d-default-domain-policy-enforced.png)
+![Group policy update](screenshots/04-gpupdate-force-success.png)
+![Nmap confirms RDP exposure](screenshots/05-nmap-rdp-port-open-on-dc.png)
+![Rockyou wordlist prepared](screenshots/06-rockyou-wordlist-ready.png)
+![Hydra discovers Sally credentials](screenshots/07-hydra-sally-success.png)
+![Hydra brute-force attempt against Administrator](screenshots/08-hydra-administrator-attempt.png)
 
 ---
 
