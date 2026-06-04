@@ -55,18 +55,29 @@ This project is best understood as the setup and validation phase for later dete
 
 ```mermaid
 graph TD
-    subgraph "Lab Environment"
-        A[Attacker VM<br/>Kali Linux] --> B[Target DC<br/>Windows Server]
-        B --> C[SIEM/Log Aggregator<br/>Security Onion/Elastic]
-        C --> D[Detection Engine<br/>EQL/Sigma Rules]
+    subgraph "Weak Configuration"
+        A[Weak RDP Settings]
+        B[Default Credentials]
+        C[Exposed Port 3389]
     end
     
-    subgraph "Detection Flow"
-        E[Reconnaissance Activity] --> F[Network Telemetry]
-        F --> G[Log Collection]
-        G --> H[Alert Generation]
-        H --> I[Incident Response]
+    subgraph "Attack Simulation"
+        D[Kali Linux] --> E[RDP Bruteforce]
+        E --> F[Windows Server]
     end
+    
+    subgraph "Detection & Response"
+        G[Windows Event Logs]
+        H[Security Onion Alerts]
+        I[Custom Detection Rules]
+    end
+    
+    A --> D
+    B --> D
+    C --> D
+    F --> G
+    G --> H
+    H --> I
 ```
 *High‑level lab architecture showing components and detection flow.*
 
