@@ -49,6 +49,27 @@ This project is best understood as the setup and validation phase for later dete
 
 ---
 
+
+
+## Architecture
+
+```mermaid
+graph TD
+    subgraph "Lab Environment"
+        A[Attacker VM<br/>Kali Linux] --> B[Target DC<br/>Windows Server]
+        B --> C[SIEM/Log Aggregator<br/>Security Onion/Elastic]
+        C --> D[Detection Engine<br/>EQL/Sigma Rules]
+    end
+    
+    subgraph "Detection Flow"
+        E[Reconnaissance Activity] --> F[Network Telemetry]
+        F --> G[Log Collection]
+        G --> H[Alert Generation]
+        H --> I[Incident Response]
+    end
+```
+*High‑level lab architecture showing components and detection flow.*
+
 ## Tools Used
 
 | Tool | Purpose |
@@ -407,6 +428,20 @@ If I expanded this project, I would improve it by:
 
 ---
 
+
+
+## What I Learned
+
+This project helped me develop practical skills in:
+
+- **Detection Engineering**: Creating rules to identify suspicious activity
+- **Network Security**: Understanding reconnaissance patterns and anomalies
+- **SIEM Operations**: Configuring and using security monitoring tools
+- **Incident Response**: Investigating and validating security alerts
+- **Lab Building**: Creating realistic training environments for hands‑on practice
+
+The hands‑on experience reinforced theoretical knowledge and improved my ability to translate security concepts into operational detection logic.
+
 ## Conclusion
 
 This project validated how a weak domain account and exposed RDP service can create a dangerous authentication path in an Active Directory lab.
@@ -414,3 +449,14 @@ This project validated how a weak domain account and exposed RDP service can cre
 The most important result was not just that Hydra found the weak `sally` credentials. The value was understanding the configuration chain that made the scenario possible: RDP exposure, account creation, Remote Desktop Users access, logon rights, policy enforcement, service reachability, and credential testing.
 
 This project is best treated as a controlled exposure and authentication validation lab that supports later defender-side analysis.
+
+---
+
+## Repository Information
+
+**Repository**: [weak-rdp-bruteforce-dc](https://github.com/Dmokom1/weak-rdp-bruteforce-dc)  
+**Author**: Dmokom1  
+**License**: MIT License  
+**Status**: Active learning project  
+
+*This repository documents my hands‑on security lab work. The content reflects my learning journey and practical application of blue team concepts.*
