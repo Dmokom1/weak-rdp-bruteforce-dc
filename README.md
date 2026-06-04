@@ -456,7 +456,6 @@ This project is best treated as a controlled exposure and authentication validat
 
 **Repository**: [weak-rdp-bruteforce-dc](https://github.com/Dmokom1/weak-rdp-bruteforce-dc)  
 **Author**: Dmokom1  
-**License**: MIT License  
 **Status**: Active learning project  
 
 *This repository documents my hands‑on security lab work. The content reflects my learning journey and practical application of blue team concepts.*
